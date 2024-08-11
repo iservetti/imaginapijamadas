@@ -1,0 +1,440 @@
+<html><head><base href="https://imaginapijamada.com.ar/">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IMAGINA Pijamadas y Ambientación - Alquiler de Carpas Temáticas</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&family=Montserrat:wght@400;600;700&display=swap');
+
+  :root {
+    --pastel-pink: #FFB6C1;
+    --light-pink: #FFC0CB;
+    --baby-pink: #F4C2C2;
+    --blush: #FFE4E1;
+    --dark-text: #4A0E1C;
+    --sky-blue: #87CEEB;
+    --sunshine-yellow: #FFDB58;
+    --mint-green: #98FF98;
+  }
+  
+  body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--blush);
+    color: var(--dark-text);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  header {
+    background-color: var(--pastel-pink);
+    padding: 2rem 1rem;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .banner {
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  }
+
+  .banner-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, var(--sky-blue), var(--sunshine-yellow), var(--mint-green));
+    animation: gradientBG 15s ease infinite;
+  }
+
+  @keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  .banner-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+
+  .banner h1 {
+    font-family: 'Kanit', sans-serif;
+    color: var(--dark-text);
+    font-size: 4rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 4px rgba(255,255,255,0.5);
+  }
+
+  .banner p {
+    font-family: 'Kanit', sans-serif;
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+    color: var(--dark-text);
+    text-shadow: 1px 1px 2px rgba(255,255,255,0.5);
+  }
+
+  .animated-elements {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
+
+  .animated-element {
+    position: absolute;
+    animation: float 6s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
+  }
+
+  .star {
+    top: 20%;
+    left: 10%;
+    font-size: 2rem;
+    color: var(--sunshine-yellow);
+  }
+
+  .heart {
+    top: 15%;
+    right: 15%;
+    font-size: 2rem;
+    color: var(--pastel-pink);
+  }
+
+  .balloon {
+    bottom: 10%;
+    left: 20%;
+    font-size: 2.5rem;
+    color: var(--mint-green);
+  }
+
+  .magic-wand {
+    bottom: 15%;
+    right: 10%;
+    font-size: 2rem;
+    transform: rotate(45deg);
+    color: var(--sky-blue);
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    flex: 1;
+  }
+  
+  .hero {
+    background-color: var(--light-pink);
+    border-radius: 10px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+  
+  .hero img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+  }
+  
+  .services {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .service-card {
+    background-color: var(--baby-pink);
+    border-radius: 10px;
+    padding: 1rem;
+    flex: 1 1 calc(25% - 1rem);
+    min-width: 200px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .service-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .service-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+  }
+  
+  .contact-form {
+    background-color: var(--pastel-pink);
+    border-radius: 10px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+  
+  input, textarea, button {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--light-pink);
+    border-radius: 4px;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  button {
+    background-color: var(--baby-pink);
+    color: var(--dark-text);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: 600;
+  }
+  
+  button:hover {
+    background-color: var(--light-pink);
+  }
+  
+  .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+  
+  .social-links a {
+    color: var(--dark-text);
+    font-size: 2rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .social-links a:hover {
+    color: var(--pastel-pink);
+  }
+
+  .contact-buttons {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .contact-button {
+    padding: 10px 15px;
+    background-color: var(--baby-pink);
+    color: var(--dark-text);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: background-color 0.3s ease;
+  }
+
+  .contact-button:hover {
+    background-color: var(--light-pink);
+  }
+
+  .contact-button i {
+    font-size: 1.2rem;
+  }
+
+  footer {
+    background-color: var(--pastel-pink);
+    color: var(--dark-text);
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+  }
+
+  .testimonials {
+    background-color: var(--light-pink);
+    border-radius: 10px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+
+  .testimonial {
+    background-color: var(--blush);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  }
+
+  .testimonial-author {
+    font-weight: bold;
+    margin-top: 0.5rem;
+  }
+
+  @media (max-width: 768px) {
+    .services {
+      flex-direction: column;
+    }
+    
+    .service-card {
+      flex: 1 1 100%;
+    }
+
+    .contact-buttons {
+      bottom: 10px;
+      right: 10px;
+    }
+    
+    .banner h1 {
+      font-size: 3rem;
+    }
+
+    .banner p {
+      font-size: 1.1rem;
+    }
+  }
+</style>
+<script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header>
+    <div class="banner">
+      <div class="banner-bg"></div>
+      <div class="banner-content">
+        <h1>IMAGINA</h1>
+        <p>Pijamadas y Ambientación</p>
+        <p>Creando experiencias mágicas para cumpleaños inolvidables</p>
+      </div>
+      <div class="animated-elements">
+        <div class="animated-element star">&#9733;</div>
+        <div class="animated-element heart">&#10084;</div>
+        <div class="animated-element balloon">&#127880;</div>
+        <div class="animated-element magic-wand">&#10024;</div>
+      </div>
+    </div>
+  </header>
+  
+  <div class="container">
+    <section class="hero">
+      <img alt="Niñas felices en una carpa temática de princesas, con decoración rosa y luces tenues" src="https://example.com/hero-image.jpg" width="1000" height="600">
+      <h2>Alquiler de Carpas Temáticas para Niñas y Niños</h2>
+      <p>Haz que el cumpleaños de tus pequeños sea una aventura mágica con nuestras carpas temáticas y accesorios únicos.</p>
+    </section>
+    
+    <section class="services">
+      <div class="service-card">
+        <img alt="Carpa temática de unicornios con colores pastel y detalles brillantes" src="https://example.com/unicorn-tent.jpg" width="200" height="150">
+        <h3>Carpas Temáticas</h3>
+        <p>Diseños encantadores para todos los gustos</p>
+      </div>
+      <div class="service-card">
+        <img alt="Colchonetas suaves y coloridas en forma de corazón, estrella y flor, perfectamente acomodadas dentro de una carpa temática" src="https://example.com/comfy-mattresses.jpg" width="200" height="150">
+        <h3>Colchonetas Cómodas</h3>
+        <p>Para un descanso dulce y divertido</p>
+      </div>
+      <div class="service-card">
+        <img alt="Niños disfrazados de superhéroes y princesas sonriendo a la cámara" src="https://example.com/fun-costumes.jpg" width="200" height="150">
+        <h3>Disfraces Divertidos</h3>
+        <p>Para que los niños se sumerjan en la fantasía</p>
+      </div>
+      <div class="service-card">
+        <img alt="Cajitas de regalo personalizadas con temática de unicornios y arcoíris" src="https://example.com/unicorn-souvenirs.jpg" width="200" height="150">
+        <h3>Souvenirs Personalizados</h3>
+        <p>Recuerdos especiales para cada invitado</p>
+      </div>
+    </section>
+
+    <section class="testimonials">
+      <h2>Lo que dicen nuestros clientes</h2>
+      <div class="testimonial">
+        <p>"¡IMAGINA hizo del cumpleaños de mi hija una experiencia inolvidable! Las carpas temáticas son hermosas y la atención al detalle es increíble. Todos los niños quedaron encantados."</p>
+        <p class="testimonial-author">- María Laura, La Plata</p>
+      </div>
+      <div class="testimonial">
+        <p>"Contraté a IMAGINA para el cumpleaños de mi hijo y fue la mejor decisión. La ambientación superó todas mis expectativas y el servicio fue excelente. ¡Muy recomendable!"</p>
+        <p class="testimonial-author">- Martín, Gonnet</p>
+      </div>
+      <div class="testimonial">
+        <p>"Las pijamadas de IMAGINA son mágicas. Mi hija y sus amigas no paraban de sonreír. La decoración, las colchonetas y los souvenirs fueron perfectos. ¡Repetiremos seguro!"</p>
+        <p class="testimonial-author">- Carolina, City Bell</p>
+      </div>
+    </section>
+    
+    <section class="contact-form">
+      <h2>Contáctanos</h2>
+      <form id="contact-form">
+        <input type="text" name="name" placeholder="Nombre" required>
+        <input type="email" name="email" placeholder="Correo electrónico" required>
+        <input type="tel" name="phone" placeholder="Teléfono" required>
+        <textarea name="message" placeholder="Mensaje" required></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+    
+    <div class="social-links">
+      <a href="https://instagram.com/imaginapijamada" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://wa.me/5492216027371" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2024 IMAGINA Pijamadas y Ambientación - Todos los derechos reservados - La Plata, Argentina</p>
+  </footer>
+
+  <div class="contact-buttons">
+    <button class="contact-button" onclick="openWhatsApp()">
+      <i class="fab fa-whatsapp"></i> Chatea con nosotros
+    </button>
+    <button class="contact-button" onclick="openInstagram()">
+      <i class="fab fa-instagram"></i> Síguenos en Instagram
+    </button>
+  </div>
+
+  <script>
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('¡Gracias por contactarnos! Te responderemos pronto.');
+      this.reset();
+    });
+
+    function openWhatsApp() {
+      const message = encodeURIComponent('Hola, me gustaría obtener más información sobre las carpas temáticas y ambientacion.');
+      window.open(`https://wa.me/5492216027371?text=${message}`, '_blank');
+    }
+
+    function openInstagram() {
+      window.open('https://instagram.com/imaginapijamadas', '_blank');
+    }
+  </script>
+</body>
+</html>
